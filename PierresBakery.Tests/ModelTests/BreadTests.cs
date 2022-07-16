@@ -9,13 +9,13 @@ namespace BreadTest.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void BreadCost_ResturnBaseBreadCost_5()
+    public void BreadCost_ReturnBaseBreadCost_5()
     {
-      int BreadQuanity = 1;
+
       double BreadCost = 5;
       Bread BreadOrder = new Bread();
     
-    Assert.AreEqual(BreadCost, BreadOrder.GetBread(BreadQuanity));
+    Assert.AreEqual(BreadCost, BreadOrder.GetBread(1));
 
     }
     
