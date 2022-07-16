@@ -11,11 +11,10 @@ namespace BreadTest.Tests
     [TestMethod]
     public void BreadCost_ReturnBaseBreadCost_5()
     {
-
-      double BreadCost = 5;
+      int BreadCost = 5;
       Bread BreadOrder = new Bread();
     
-    Assert.AreEqual(BreadCost, BreadOrder.GetBread(1));
+    Assert.AreEqual(BreadCost, BreadOrder.GetBreadCost(1));
 
     }
     
