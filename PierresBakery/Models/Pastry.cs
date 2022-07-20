@@ -3,33 +3,31 @@ namespace PierresBakery.Models
   public class Pastry
   {
     private static double _Price = 2;
-    public int Quanity {get; set;}
-    
+    public int Quantity {get; set;}
+    private double _Discount;
+
     public static double Price
     {
       get {return _Price;}
       set {_Price = value;}
     }
-   public Pastry (int quanity)
+   public Pastry (int quantity)
    {
       _Price = Price;
-      Quanity = quanity;
+      Quantity = quantity;
+      _Discount = 1;
    }
-   public double PastryCost()
+    public double PastryCost()
     {
-     double pastryTotal = 0;
-     for (int i = 0; i <= Quanity; i ++)
-     {
-      if (i == 0)
+      double pastryTotal = Quantity*2;
+      for (int index = 1; index <= Quantity; index++)
       {
-        pastryTotal += 0;
+        if (index % 3 == 0)
+        {
+          pastryTotal -= _Discount;
+        }
       }
-      else
-      {
-        pastryTotal += _Price;
-      }
-     }
       return pastryTotal;
     }
+  } 
   }
-}
