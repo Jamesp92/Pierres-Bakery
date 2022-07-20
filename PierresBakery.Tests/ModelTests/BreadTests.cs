@@ -33,7 +33,7 @@ namespace BreadTest.Tests
             Assert.AreEqual(breadCost , BreadOrder.BreadCost());
         }
          [TestMethod]
-        public void  BreadCost_thirdLoafisDiscount_Int()
+        public void  BreadCost_thirdLoafisDiscounted_Int()
         
         {
             //Arrange
@@ -44,6 +44,19 @@ namespace BreadTest.Tests
             //Assert
             Assert.AreEqual(breadCost , BreadOrder.BreadCost());
         }
+        [TestMethod]
+        public void  BreadCost_TwentyFourLoafsuseDiscount_Int()
+        
+        {
+            //Arrange
+            int breadQuantity = 24;
+            double breadCost = 80;
+            //Act
+           Bread BreadOrder = new Bread(breadQuantity);
+            //Assert
+            Assert.AreEqual(breadCost , BreadOrder.BreadCost());
+        }
+
          
 }
 }
