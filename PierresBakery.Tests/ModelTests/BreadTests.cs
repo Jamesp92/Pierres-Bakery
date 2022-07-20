@@ -13,12 +13,12 @@ namespace BreadTest.Tests
         
         {
             //Arrange
-            int BreadQuantity = 1;
-            double BreadCost = 5;
+            int breadQuantity = 1;
+            double breadCost = 5;
             //Act
-           Bread BreadOrder = new Bread();
+           Bread BreadOrder = new Bread(breadQuantity);
             //Assert
-            Assert.AreEqual(BreadCost, BreadOrder.BreadCost());
+            Assert.AreEqual(breadCost , BreadOrder.BreadCost());
         }
    }
 }
