@@ -7,9 +7,9 @@ C# application for a bakery that calculates the price of bread and pastries with
 
 ## Technologies Used
 
-*c#
-*html
-*dotnet
+* c#
+* html
+* dotnet
 
 
 ## Description
