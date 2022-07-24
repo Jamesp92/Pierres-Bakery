@@ -33,12 +33,21 @@ namespace PierresBakery
           Menu();
         }
 
+      }
       else if (pastryOrBread =="bread")
         {
           Console.WriteLine(" We have the best deals on bread in the city !");
           Console.WriteLine("each loaf of bread is $" + Bread.Price + " " + " if you buy 2 you get one free !");
+         int breadAmount = int.Parse(Console.ReadLine());
+        Bread BreadOrder = new Bread(breadAmount);
+        Console.WriteLine("Great!" + " " + BreadOrder.Quantity + " " + "pastries" + " " + "will be $" + BreadOrder.BreadCost());
+        Console.WriteLine("would you like to buy anything else ? Y/N?");
+        string nextStep = (Console.ReadLine().ToLower());
+        if (nextStep == "y")
+        {
+          Menu();
         }
       }
      }
-    }
   }
+}

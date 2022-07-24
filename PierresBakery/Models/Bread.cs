@@ -3,7 +3,7 @@ namespace PierresBakery.Models
   public class Bread
   {
     private static double _Price = 5;
-    public int Quanity {get; set;}
+    public int Quantity {get; set;}
     public double _Discount;
 
     public static double Price
@@ -12,10 +12,10 @@ namespace PierresBakery.Models
       set {_Price = value;}
     }
     
-    public Bread (int quanity)
+    public Bread (int quantity)
     {
       _Price = Price;
-      Quanity = quanity;
+      Quantity = quantity;
       _Discount = 0;
 
     }
@@ -23,7 +23,7 @@ namespace PierresBakery.Models
     public double BreadCost()
     {
      double breadTotal = 0;
-     for (int i = 0; i <= Quanity; i ++)
+     for (int i = 0; i <= Quantity; i ++)
      {
       if (i == 0)
       {
